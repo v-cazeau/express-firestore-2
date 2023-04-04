@@ -7,7 +7,7 @@ export function addNewTv(req, res) {
         .add(newTv)
         .then(doc => res.status(201).send(`New Tv Added: ${doc.id}`)) //doc b/c firestore is a document database
         .catch(err => req.status(500).send(err))
-}
+};
 
 export async function getAllTv(req,res) {
     const collection = await db.collection('tvShows')
@@ -17,4 +17,4 @@ export async function getAllTv(req,res) {
         const tvShowList = collection.doc.map(
             tvShow => ({...tvShow.data(), id:tvShow.id})
         )
-}
+};
