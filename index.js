@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json()); 
 
 //get all TV shows
-app.get('/tvShows',getAllTv);
+app.get('/tvshows',getAllTv);
 //add TvShows
-app.post('/tvShow',addNewTv); 
+app.post('/tvshows',addNewTv); 
 
 
 app.listen(PORT, () => {

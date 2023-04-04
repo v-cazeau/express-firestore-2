@@ -17,4 +17,6 @@ export async function getAllTv(req,res) {
         const tvShowList = collection.doc.map(
             tvShow => ({...tvShow.data(), id:tvShow.id})
         )
+        
+        res.status(201).send(tvShowList);
 };
